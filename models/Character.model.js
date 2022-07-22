@@ -14,7 +14,7 @@ const characterSchema = new Schema({
 
 });
 
-module.exports = model("User", characterSchema);
+module.exports = model("Character", characterSchema);
 
 
 
