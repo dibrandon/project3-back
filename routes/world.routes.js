@@ -8,6 +8,8 @@ router.post("/world", (req, res, next)=>{
     const {nombre, breveDescripcion, rpgSystem} = req.body;
 
     World.create({nombre, breveDescripcion, rpgSystem})
-    .then((newWorld) => res.json(newWorld))
+    .then((response) => res.json(response))
     .catch((err) => res.json(err))
 });
+
+module.exports = router;
