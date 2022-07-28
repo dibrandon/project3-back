@@ -12,4 +12,14 @@ router.post("/world", (req, res, next)=>{
     .catch((err) => res.json(err))
 });
 
-module.exports = router;
+//  GET /api/worlds -  Retrieves all of the projects
+ router.get('/world', (req, res, next) => {
+ 	World.find().populate('personajes').then((allworlds) => res.json(allworlds)).catch((err) => res.json(err));
+ });
+
+// router.get("/world", (req, res, next) => {
+//     World.find()
+//       .then((response) => res.json(response))
+//       .catch((err) => res.json(err));
+//   });
+// module.exports = router;
