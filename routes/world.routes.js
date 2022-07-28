@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 
-const World = require("../models/World.model")
+const World = require("../models/Worlds.model")
 
 router.post("/world", (req, res, next)=>{
     const {nombre, breveDescripcion, rpgSystem} = req.body;
