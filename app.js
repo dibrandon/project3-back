@@ -23,6 +23,9 @@ app.use("/api", isAuthenticated, projectRouter);            // <== UPDATE
 const projectWorld = require("./routes/world.routes");
 app.use("/api", isAuthenticated, projectWorld);
 
+const projectCharacter = require("./routes/character.routes")
+app.use("/api", isAuthenticated, projectCharacter);
+
 const taskRouter = require("./routes/task.routes");
 app.use("/api",isAuthenticated, taskRouter);            // <== UPDATE
 
